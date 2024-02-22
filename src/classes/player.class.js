@@ -13,6 +13,8 @@ export class Player {
     setPlayerState(state) {
         this.playerState = state;
         this.playerImage.src = `./src/sprites/${this.playerState}.png`;
+        this.staggerFrames = this.spriteAnimations[state].staggerFrames;
+
     }
 
     setupAnimations(animationStates) {
@@ -23,8 +25,10 @@ export class Player {
                 let positionY = 0;
                 frames.loc.push({ x: positionX, y: positionY });
             }
-            this.spriteAnimations[state.name] = frames;
+            frames.staggerFrames = state.staggerFrames;
+            this.spriteAnimations[state.name] = frames;  
         });
+        this.staggerFrames = this.spriteAnimations[this.playerState].staggerFrames;
     }
 
     animate(ctx, CANVAS_WIDTH, CANVAS_HEIGHT) {
