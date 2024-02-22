@@ -1,5 +1,6 @@
-```
-.
+Deploy: https://tiago1820.github.io/my-animations/
+
+```.
 ├── index.html
 ├── README.md
 └── src
