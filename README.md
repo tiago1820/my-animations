@@ -1,4 +1,4 @@
-Project Structure
+```
 .
 ├── index.html
 ├── README.md
@@ -9,5 +9,5 @@ Project Structure
     │   └── uiManager.class.js
     ├── main.js
     ├── sprites
-    │   ├── ...
     └── style.css
+```
